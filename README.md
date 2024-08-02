@@ -50,8 +50,7 @@ Content-Disposition: form-data; name="file"; value="example.png"
 
 The response message you will receive is:
 
-json
-
+fomart : json
 {
     "message": string,
     "predicted_class": string,
