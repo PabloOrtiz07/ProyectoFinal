@@ -28,10 +28,25 @@ To ensure that all packages are installed correctly, you can run the following c
 ```sh
 pip list
 
-Endpoint Information
-The only endpoint for this application will be:
+## Endpoint Information
 
-POST /predicted
+### POST `/predicted`
+
+This endpoint accepts a multipart/form-data request to upload a file and receive a prediction.
+
+#### Request
+
+The request should be a multipart/form-data with the following parts:
+
+- **file**: The file to be uploaded for prediction.
+
+#### Example Request
+
+```http
+POST /predicted 
+Content-Type: multipart/form-data;
+Content-Disposition: form-data; name="file"; value="example.png"
+
 
 The response message you will receive is:
 
